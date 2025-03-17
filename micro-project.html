@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro-Project Topics - MSBTE Notes and Information</title>
+    <meta name='author' content='MSBTE notes' />
+    <meta name="description"
+        content="Explore various micro-project topics and ideas relevant to MSBTE courses. Join our Telegram group for the latest updates.">
+    <meta name="keywords"
+        content="MSBTE, micro-project topics, project ideas, MSBTE subjects, Telegram group, latest updates, Maharashtra State Board of Technical Education">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google tag (gtag.js) -->
+    <script src="https://alwingulla.com/88/tag.min.js" data-zone="110795" async data-cfasync="false"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NR95RVFRGQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NR95RVFRGQ');
+</script>
+    <style>
+
+    h1 {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .selector {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        padding: 0 20px;
+    }
+
+    select {
+        width: 100%;
+        max-width: 400px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .topics-container {
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+
+    .sub-category {
+        margin-bottom: 20px;
+    }
+
+    .sub-category h3 {
+        color: #555;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 5px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        background-color: #f9f9f9;
+        margin: 5px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        text-align: left;
+        transition: background-color 0.3s ease;
+    }
+
+    li:hover {
+        background: #e9e9e9;
+    }
+
+    @media (min-width: 600px) {
+        .selector {
+            margin-bottom: 30px;
+        }
+
+        select {
+            max-width: 600px;
+            padding: 12px;
+            font-size: 18px;
+        }
+
+        .topics-container {
+            padding: 0 40px;
+        }
+
+        li {
+            padding: 12px;
+            margin: 8px 0;
+        }
+    }
+
+    @media (min-width: 900px) {
+        .topics-container {
+            padding: 0 60px;
+        }
+
+        select {
+            max-width: 800px;
+        }
+
+        li {
+            padding: 14px;
+            margin: 10px 0;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <h1>MSBTE Notes and Information</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        <div class="dropdown">
+            <button class="dropbtn">Scheme
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="i-scheme.html">I-Scheme</a>
+                <a href="k-scheme.html">K-Scheme</a>
+                <a href="content.html">Other Content</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Micro-Project Topics</h1>
+        <p>Choose a subject to view its microproject topics:</p>
+        <select id="subjectSelect" onchange="showTopics()">
+            <option value="">Select a Subject</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+            <option value="Computer Engineering">Computer Engineering</option>
+            <option value="Electronics and Telecommunication Engineering">Electronics and Telecommunication Engineering
+            </option>
+            <option value="Automobile Engineering">Automobile Engineering</option>
+            <option value="Information Technology">Information Technology</option>
+        </select>
+
+        <div id="topics">
+            <!-- Topics will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        function showTopics() {
+            var subject = document.getElementById("subjectSelect").value;
+            var topicsContainer = document.getElementById("topics");
+
+            if (subject === "") {
+                topicsContainer.innerHTML = "";
+                return;
+            }
+
+            var topics = getTopics(subject);
+
+            var html = "<h2>" + subject + "</h2>";
+            for (var category in topics) {
+                html += "<h3>" + category + "</h3><ul>";
+                topics[category].forEach(function (topic) {
+                    html += "<li>" + topic + "</li>";
+                });
+                html += "</ul>";
+            }
+
+            topicsContainer.innerHTML = html;
+        }
+
+        function getTopics(subject) {
+            switch (subject) {
+                case "Civil Engineering":
+                    return {
+                        "Surveying": [
+                            "Design and layout of a small park",
+                            "Survey and mapping of a local area",
+                            "Establishing and measuring bench marks",
+                            "Road alignment survey for a proposed road",
+                            "Plotting a contour map for a given area"
+                        ],
+                        "Building Construction": [
+                            "Model of different types of foundations",
+                            "Study and design of formwork for concrete structures",
+                            "Planning and drawing a residential building",
+                            "Construction techniques of a low-cost house model",
+                            "Analysis of different types of construction materials"
+                        ],
+                        "Strength of Materials": [
+                            "Testing tensile strength of various materials",
+                            "Stress-strain analysis of different construction materials",
+                            "Experiment on bending of beams",
+                            "Study of shear force and bending moment diagrams",
+                            "Compression test on concrete cylinders"
+                        ],
+                        "Hydraulics": [
+                            "Design and construction of a small-scale dam model",
+                            "Measurement of flow rates in open channels",
+                            "Study of different types of pumps and their applications",
+                            "Analysis of hydraulic jump in open channels",
+                            "Experiment on Bernoulli’s theorem"
+                        ],
+                        "Structural Engineering": [
+                            "Design of a simple truss bridge model",
+                            "Analysis of load distribution in beams",
+                            "Study of different types of structural systems",
+                            "Design of a reinforced concrete beam",
+                            "Structural analysis using software"
+                        ]
+                    };
+                case "Mechanical Engineering":
+                    return {
+                        "Engineering Mechanics": [
+                            "Study of equilibrium of concurrent forces",
+                            "Experiment on the center of gravity of different shapes",
+                            "Analysis of friction on an inclined plane",
+                            "Study of different types of supports and their reactions",
+                            "Simple machine and their mechanical advantage"
+                        ],
+                        "Fluid Mechanics": [
+                            "Experiment on the flow through a venturi meter",
+                            "Study of fluid flow around objects (aerodynamics)",
+                            "Measurement of viscosity of different fluids",
+                            "Demonstration of Bernoulli’s principle",
+                            "Analysis of fluid pressure in different conditions"
+                        ],
+                        "Strength of Materials": [
+                            "Tensile testing of metal samples",
+                            "Bending test on steel and wooden beams",
+                            "Analysis of torsion in circular shafts",
+                            "Impact testing using Charpy or Izod method",
+                            "Study of hardness testing methods"
+                        ],
+                        "Machine Drawing": [
+                            "Drawing of different types of gears",
+                            "Detailed drawing of a lathe machine part",
+                            "Assembly drawing of a simple mechanical device",
+                            "Sectional view of a mechanical component",
+                            "3D modeling of a mechanical part using CAD software"
+                        ],
+                        "Thermodynamics": [
+                            "Study of heat transfer in different materials",
+                            "Design of a simple heat exchanger model",
+                            "Experiment on thermal conductivity of various materials",
+                            "Analysis of an ideal gas process",
+                            "Study of refrigeration cycle using a mini-refrigerator"
+                        ]
+                    };
+                case "Electrical Engineering":
+                    return {
+                        "Electrical Circuits": [
+                            "Design and analysis of a simple RLC circuit",
+                            "Study of different types of transformers",
+                            "Experiment on Kirchhoff’s laws",
+                            "Analysis of AC circuits using oscilloscope",
+                            "Design of a basic electrical distribution system"
+                        ],
+                        "Electrical Machines": [
+                            "Construction of a small DC motor",
+                            "Study of characteristics of induction motors",
+                            "Experiment on transformer efficiency",
+                            "Design and testing of a simple alternator",
+                            "Analysis of synchronous machines"
+                        ],
+                        "Power Electronics": [
+                            "Design of a simple rectifier circuit",
+                            "Study and application of SCRs in circuits",
+                            "Experiment on different types of inverters",
+                            "Design of a basic DC-DC converter",
+                            "Analysis of power factor correction methods"
+                        ],
+                        "Control Systems": [
+                            "Design and testing of a PID controller",
+                            "Study of open-loop and closed-loop control systems",
+                            "Simulation of control systems using software",
+                            "Analysis of stability of control systems",
+                            "Experiment on speed control of DC motors"
+                        ],
+                        "Electrical Measurement & Instrumentation": [
+                            "Calibration of voltmeters and ammeters",
+                            "Design of a simple digital voltmeter",
+                            "Study of different types of sensors and transducers",
+                            "Experiment on bridge circuits for measurement",
+                            "Analysis of signal conditioning circuits"
+                        ]
+                    };
+                case "Computer Engineering":
+                    return {
+                        "Programming in C/C++": [
+                            "Development of a simple calculator program",
+                            "Implementation of data structures like linked lists",
+                            "Design of a basic banking system application",
+                            "Simulation of simple sorting algorithms",
+                            "Development of a basic game in C/C++"
+                        ],
+                        "Data Structures": [
+                            "Implementation of stack and queue operations",
+                            "Design of a binary search tree and its operations",
+                            "Simulation of graph traversal algorithms",
+                            "Study and implementation of hash tables",
+                            "Analysis of time complexity of different algorithms"
+                        ],
+                        "Computer Networks": [
+                            "Design and setup of a small LAN",
+                            "Simulation of different network topologies",
+                            "Experiment on data transmission using different protocols",
+                            "Study of network security techniques",
+                            "Implementation of a simple client-server model"
+                        ],
+                        "Database Management Systems": [
+                            "Design of a database for a library management system",
+                            "Implementation of SQL queries for different operations",
+                            "Study and use of normalization techniques",
+                            "Design of a basic web-based database application",
+                            "Analysis of transaction management in databases"
+                        ],
+                        "Operating Systems": [
+                            "Simulation of process scheduling algorithms",
+                            "Study of memory management techniques",
+                            "Experiment on file system implementation",
+                            "Design of a simple shell in Linux",
+                            "Analysis of different operating system architectures"
+                        ]
+                    };
+                case "Electronics and Telecommunication Engineering":
+                    return {
+                        "Electronic Devices and Circuits": [
+                            "Design and testing of a diode rectifier circuit",
+                            "Study of transistor characteristics",
+                            "Construction of a simple amplifier circuit",
+                            "Experiment on operational amplifiers",
+                            "Analysis of different oscillator circuits"
+                        ],
+                        "Digital Electronics": [
+                            "Design of basic logic gates using discrete components",
+                            "Implementation of combinational circuits",
+                            "Study and design of flip-flops and counters",
+                            "Construction of a simple ALU",
+                            "Simulation of digital circuits using software"
+                        ],
+                        "Communication Engineering": [
+                            "Experiment on amplitude modulation and demodulation",
+                            "Study of frequency modulation techniques",
+                            "Design of a simple transmitter and receiver",
+                            "Analysis of noise in communication systems",
+                            "Experiment on digital modulation techniques"
+                        ],
+                        "Microprocessors and Microcontrollers": [
+                            "Study and programming of 8085 microprocessor",
+                            "Design of a simple traffic light control system",
+                            "Implementation of ADC and DAC using microcontroller",
+                            "Experiment on interfacing different peripherals",
+                            "Development of a basic home automation system"
+                        ],
+                        "Antenna and Wave Propagation": [
+                            "Design of a simple dipole antenna",
+                            "Experiment on radiation pattern of antennas",
+                            "Study of different types of antennas",
+                            "Analysis of wave propagation in different media",
+                            "Measurement of antenna parameters"
+                        ]
+                    };
+                case "Automobile Engineering":
+                    return {
+                        "Automobile Engines": [
+                            "Study and analysis of engine components",
+                            "Experiment on engine performance parameters",
+                            "Design of a basic engine cooling system",
+                            "Analysis of combustion process in engines",
+                            "Study of different types of fuel injection systems"
+                        ],
+                        "Vehicle Dynamics": [
+                            "Simulation of vehicle suspension systems",
+                            "Study of tire mechanics and traction",
+                            "Experiment on vehicle braking systems",
+                            "Analysis of vehicle stability and control",
+                            "Design of a basic vehicle model using software"
+                        ],
+                        "Automobile Transmission": [
+                            "Study of different types of gearboxes",
+                            "Experiment on clutch mechanisms",
+                            "Analysis of automatic transmission systems",
+                            "Design and testing of a simple differential",
+                            "Study of transmission efficiency"
+                        ],
+                        "Automotive Electrical Systems": [
+                            "Design of a basic car lighting system",
+                            "Study of automotive battery and charging systems",
+                            "Experiment on vehicle ignition systems",
+                            "Analysis of automotive wiring harness",
+                            "Development of a basic electronic control unit (ECU)"
+                        ],
+                        "Vehicle Maintenance": [
+                            "Study and practice of vehicle servicing techniques",
+                            "Analysis of common vehicle faults and their remedies",
+                            "Experiment on lubrication and cooling systems",
+                            "Study of vehicle inspection and testing methods",
+                            "Development of a maintenance schedule for a vehicle"
+                        ]
+                    };
+                case "Information Technology":
+                    return {
+                        "Fundamentals of IT": [
+                            "Study and setup of different computer hardware components",
+                            "Design and implementation of a small network",
+                            "Experiment on different operating systems",
+                            "Analysis of various software tools and applications",
+                            "Development of a basic IT project plan"
+                        ],
+                        "Web Programming": [
+                            "Design of a simple personal website",
+                            "Development of a basic e-commerce site",
+                            "Experiment with different web technologies (HTML, CSS, JS)",
+                            "Implementation of a blog using a CMS",
+                            "Study and application of responsive web design"
+                        ],
+                        "Data Structures": [
+                            "Implementation of linked lists and their operations",
+                            "Design of a stack-based calculator",
+                            "Simulation of queue operations",
+                            "Development of a binary search tree application",
+                            "Analysis of sorting and searching algorithms"
+                        ],
+                        "Software Testing": [
+                            "Design and execution of test cases for a small application",
+                            "Experiment with different testing techniques (unit, integration)",
+                            "Analysis of software testing tools",
+                            "Study of bug tracking and reporting systems",
+                            "Implementation of a simple test automation script"
+                        ],
+                        "Network Security": [
+                            "Study of different types of cyber attacks",
+                            "Implementation of basic encryption and decryption",
+                            "Experiment on network security tools (firewalls, antivirus)",
+                            "Analysis of security protocols (SSL/TLS)",
+                            "Design of a secure communication system"
+                        ],
+                        "Database Management Systems": [
+                            "Design of a database schema for an online store",
+                            "Implementation of complex SQL queries",
+                            "Study and application of database normalization",
+                            "Development of a basic CRUD application",
+                            "Analysis of database backup and recovery techniques"
+                        ],
+                        "Cloud Computing": [
+                            "Setup of a cloud environment using a cloud service provider",
+                            "Experiment on cloud storage solutions",
+                            "Development of a simple cloud-based application",
+                            "Analysis of cloud computing models (IaaS, PaaS, SaaS)",
+                            "Study of cloud security best practices"
+                        ],
+                        "Mobile Application Development": [
+                            "Design and development of a simple mobile app",
+                            "Experiment with different mobile development frameworks",
+                            "Implementation of a mobile app with a database backend",
+                            "Study of mobile UI/UX design principles",
+                            "Analysis of mobile app performance and optimization techniques"
+                        ]
+                    };
+                default:
+                    return {};
+            }
+        }
+    </script>
+    <br>
+    <div class="disclaimer">
+        <p>To use this page, follow these steps:</p>
+        <ol>
+            <li>Select your subject from the dropdown menu.</li>
+            <li>Once you select a subject, a list of topics will appear.</li>
+            <li>Click on any topic to explore further details and start your microproject.</li>
+        </ol>
+    </div>
+    </div>
+    <footer>
+        <div class="footer-links">
+            <a href="disclaimer.html">Disclaimer</a> |
+            <a href="policies.html">Policies</a> |
+            <a href="Terms-Conditions.html">Terms & Conditions</a>
+        </div>
+        <hr>
+        <p>This website is NOT official website of Maharashtra State Board of Technical Education (MSBTE). This
+            website is developed to help the student preparing diploma engineering exams under MSBTE. This
+            website aims to provide the study resources such as question papers, model answers, simple notes,
+            tuition videos, and power point presentations needed for preparing the exam of MSBTE.</p>
+        <hr>
+        <p>&copy; 2024 MSBTE Notes. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
