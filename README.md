@@ -52,7 +52,8 @@ Contributions are welcome! Feel free to fork the repo and submit a pull request 
 
 ## 📬 Contact
 For any queries, suggestions, or collaborations, feel free to reach out:
-📧 **Email**: bitbuster32@gmail.com(mailto:bitbuster32@gmail.com)
+
+📧 **Email**: bitbuster32@gmail.com
 
 🌐 **Website**: https://msbte.rf.gd/
 
