@@ -1,0 +1,162 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.video-wrapper {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.options button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.options button:hover {
+    background-color: #2563eb;
+}
+
+.my-items {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.my-items h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 8px;
+}
+
+.my-items h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+#saved-notes, #saved-bookmarks, #saved-favorites {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+#notes-list {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+ul li:hover {
+    background-color: #e2e8f0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #3b82f6;
+    font-weight: bold;
+    margin-left: 5px;
+    transition: color 0.2s;
+}
+
+ul li a:hover {
+    color: #2563eb;
+}
+
+.notes-section {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.notes-section textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    resize: vertical;
+}
+
+.notes-section button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.notes-section button:hover {
+    background-color: #0b7dda;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.4em;
+    }
+    .options button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    .my-items h2, .my-items h3 {
+        font-size: 1em;
+    }
+    .notes-section textarea {
+        height: 120px;
+    }
+}
